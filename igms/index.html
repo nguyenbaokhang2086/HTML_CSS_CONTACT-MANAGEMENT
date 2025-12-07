@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Danh Bạ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!--HEADER-->
+      <div class="header">
+        <div class="header-text">
+          <div class="header-title">Quản Lý Danh Bạ</div>
+          <div class="header-content">
+            Quản lý và tổ chức danh bạ của bạn một cách dễ dàng
+          </div>
+        </div>
+
+        <div class="header-button">
+          <button id="btnOpenDialog">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+            <span>Thêm Danh Bạ</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- SEARCH BOX -->
+      <div class="search-box">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Tìm kiếm theo tên, số điện thoại hoặc email..."
+        />
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="search-icon"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </div>
+
+      <!-- CONTACT LIST -->
+      <div class="contact-list">
+        <!-- CARD 1 -->
+        <div class="contact-card">
+          <div class="contact-title">Nguyễn Văn A</div>
+
+          <div class="contact-info">
+            <div class="line">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 
+                           19.79 19.79 0 0 1-8.63-3.07 
+                           19.5 19.5 0 0 1-6-6 
+                           19.79 19.79 0 0 1-3.07-8.67
+                           A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72
+                           12.84 12.84 0 0 0 .7 2.81
+                           2 2 0 0 1-.45 2.11L8.09 9.91
+                           a16 16 0 0 0 6 6l1.27-1.27
+                           a2 2 0 0 1 2.11-.45
+                           12.84 12.84 0 0 0 2.81.7
+                           A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </span>
+              +84912345678
+            </div>
+
+            <div class="line"><span></span> nguyenvana@example.com</div>
+            <div class="line">
+              <span></span> 123 Đường Lê Lợi, Quận 1, TP.HCM
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="edit">Sửa</button>
+            <button class="delete">Xóa</button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="contact-card">
+          <div class="contact-title">Trần Thị B</div>
+
+          <div class="contact-info">
+            <div class="line"><span></span> +84987654321</div>
+            <div class="line"><span></span> tranthib@example.com</div>
+            <div class="line">
+              <span></span> 456 Đường Nguyễn Huệ, Quận 3, TP.HCM
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="edit">Sửa</button>
+            <button class="delete">Xóa</button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="contact-card">
+          <div class="contact-title">Tran Thi b</div>
+
+          <div class="contact-info">
+            <div class="line"><span></span> +84987654321</div>
+            <div class="line"><span></span> tranthib@example.com</div>
+            <div class="line"><span></span> K59/11 Bac Dau</div>
+          </div>
+
+          <div class="actions">
+            <button class="edit">Sửa</button>
+            <button class="delete">Xóa</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIALOG THÊM MỚI -->
+      <dialog id="dialogThemMoi">
+        <div class="noi-dung-dialog">
+          <h3>Thêm Danh Bạ Mới</h3>
+          <p>Nhập thông tin danh bạ mới</p>
+
+          <div>
+            <label for="inputTen">Họ và tên:</label>
+            <input type="text" id="inputTen" placeholder="Nhập họ và tên..." />
+          </div>
+
+          <div>
+            <label for="inputSDT">Số điện thoại:</label>
+            <input
+              type="text"
+              id="inputSDT"
+              placeholder="Nhập số điện thoại..."
+            />
+          </div>
+
+          <div>
+            <label for="inputEmail">Email:</label>
+            <input type="email" id="inputEmail" placeholder="Nhập email..." />
+          </div>
+
+          <div>
+            <label for="inputDiaChi">Địa chỉ:</label>
+            <input type="text" id="inputDiaChi" placeholder="Nhập địa chỉ..." />
+          </div>
+
+          <div class="actions">
+            <button id="btnHuy" class="cancel">Hủy</button>
+            <button id="btnLuu" class="save">Lưu</button>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </body>
+</html>
