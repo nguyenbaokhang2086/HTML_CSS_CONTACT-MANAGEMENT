@@ -98,6 +98,7 @@ body {
   font-size: 14px;
   color: red;
   background: white;
+  width: 100%;
 }
 
 .edit {
@@ -110,7 +111,7 @@ body {
 }
 /* Trang trí cái hộp dialog */
 dialog {
-  display: block;
+  /* display: block; */
   border: none;
   border-radius: 8px;
   padding: 20px;
@@ -130,4 +131,54 @@ dialog::backdrop {
 .container {
   position: relative;
   min-height: 100vh;
+}
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+.dialog-header {
+  gap: 8px;
+  display: grid;
+}
+.dialog-body {
+  gap: 16px;
+  display: grid;
+}
+.content-dialog {
+  gap: 16px;
+  display: grid;
+}
+.actions .cancel {
+  border-radius: 8px;
+  border-width: 1px;
+  border: 1px solid #e5e5e5;
+  color: black;
+}
+.actions .save {
+  border-radius: 8px;
+  border-width: 1px;
+  border: 1px solid #e5e5e5;
+  color: white;
+  background: black;
+}
+.dialog-title {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+.dialog-subtitle {
+  font-size: 14px;
+  color: #666666;
+}
+.form-group input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
 }
